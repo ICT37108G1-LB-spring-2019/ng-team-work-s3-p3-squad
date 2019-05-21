@@ -1,0 +1,28 @@
+<h1>
+  hello admin!
+</h1>
+
+<button [routerLink]="'/admin/shirts/add'">
+  add new shirt
+</button>
+
+<table>
+  <tr>
+    <th>product</th>
+    <th>actions</th>
+  </tr>
+  <tr *ngFor="let item of items">
+    <td>{{ item.title.short }}</td>
+    <td>
+      <button [routerLink]="'/admin/shirts/'+item.id+'/edit/'">edit</button>
+      <button (click)="delete(item.id)">delete</button>
+    </td>
+  </tr>
+</table>
+
+<app-paging
+  [totalRows]="totalRows"
+  [currentPage]="currentPage"
+  [rowsPerPage]="perPage"
+  (pageChange)="onPageChange($event)"
+></app-paging>

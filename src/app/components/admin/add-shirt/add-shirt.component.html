@@ -1,0 +1,45 @@
+<h1>
+  add a new shirt
+</h1>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+    <label>
+      Short Title
+      <input type="text" formControlName="shortTitle" placeholder="Short Title">
+    </label>
+    <label>
+      Long Title
+      <input type="text" formControlName="longTitle" placeholder="Long Title">
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label>
+      Thumbnail
+      <input type="text" formControlName="thumbImage" placeholder="Thumbnail">
+    </label>
+    <label>
+      Large Image
+      <input type="text" formControlName="largeImage" placeholder="Large Image">
+    </label>
+  </div>
+
+  <div class="form-group">
+    <label>
+      Color
+      <input type="text" formControlName="detailsColor" placeholder="Color">
+    </label>
+    <label>
+      Size
+      <input type="text" formControlName="detailsSize" placeholder="Size">
+    </label>
+    <label>
+      Material
+      <input type="text" formControlName="detailsMaterial" placeholder="Material">
+    </label>
+  </div>
+
+  <button type="submit">add</button>
+</form>

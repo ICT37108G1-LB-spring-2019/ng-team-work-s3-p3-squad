@@ -1,0 +1,10 @@
+.page-item {
+  margin-right: 10px;
+  cursor: pointer;
+
+  &.active {
+    color: red;
+    cursor: default;
+  }
+}
+

@@ -1,0 +1,6 @@
+<div class="paging">
+  pages
+  <span *ngFor="let page of pages" (click)="onPageChange(page)" class="page-item" [class.active]="page === currentPage">
+    {{ page }}
+  </span>
+</div>

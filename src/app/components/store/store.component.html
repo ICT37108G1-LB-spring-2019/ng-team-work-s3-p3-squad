@@ -1,0 +1,18 @@
+<h1>
+  welcome to our store
+</h1>
+
+<ul>
+  <li *ngFor="let item of items">
+    <img class="thumb" src="{{ item.image.thumb }}" alt="{{ item.title.short }}">
+    {{ item.title.short }}
+    <a [routerLink]="'/store/shirt/' + item.id">Details</a>
+  </li>
+</ul>
+
+<app-paging
+  [totalRows]="totalRows"
+  [currentPage]="currentPage"
+  [rowsPerPage]="perPage"
+  (pageChange)="onPageChange($event)"
+></app-paging>

@@ -1,0 +1,19 @@
+<div *ngIf="item">
+  <h1>
+    {{ item.title.long }}
+  </h1>
+
+  <img class="image" src="{{ item.image.large }}" alt="{{ item.title.long }}">
+
+  <table>
+    <tr>
+      <td>Key</td>
+      <td>Value</td>
+    </tr>
+    <tr *ngFor="let entry of itemDetails">
+      <td>{{ entry[0] }}:</td>
+      <td><b>{{ entry[1] }}</b></td>
+    </tr>
+  </table>
+
+</div>
